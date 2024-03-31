@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div>
+        <label for="username">Usuário</label>
+        <input 
+        id="username"
+        name="username"
+        [(ngModel)]="loginFormModel.user"
+        #user="ngModel"
+        >
+        <label for="password">Senha</label>
+        <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="loginFormModel.accesskey"
+        #accesskey="ngModel"
+        >
+    </div>
+
+    <div class="form-btn">
+        <button type="submit">Entrar</button>
+        <button type="button" (click)="goToSignUp()">Cadastrar</button>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<section>
+  <form>
+    <input [(ngModel)]="productName" [ngModelOptions]="{standalone: true}" type="text" placeholder="Digite um produto" />
+    <button type="button" (click)="search()">Buscar</button>
+  </form>
+  <button (click)="goToLogin()">Entrar</button>
+</section>
+<ul id="productUList">
+  <li *ngFor="let product of productsDisplayed">
+    <app-card class="product" [product]="product"></app-card>
+  </li>
+</ul>
